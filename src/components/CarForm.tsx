@@ -23,7 +23,7 @@ const ContactForm = ( props:CarFormProps) => {
     console.log(data)
     if (props.id && props.id.length > 0) {
       server_calls.update(props.id[0], data)
-      console.log(`Updated: ${ data.first } ${ props.id }`)
+      console.log(`Updated: ${ data.make } ${ props.id }`)
       setTimeout(() => {window.location.reload()}, 1000);
       event.target.reset()
     } else {
