@@ -8,11 +8,10 @@ import { useGetData } from '../custom-hooks/FetchData';
 
 const columns: GridColDef[] = [
     { field: 'id', headerName: "ID", width: 90},
-    { field: 'Email', headerName: "User Email", flex: 1},
-    { field: 'Make', headerName: "Make", flex: 1},
-    { field: 'Model', headerName: "Model", flex: 1},
-    { field: 'Year', headerName: "Year", flex: 1},
-    { field: 'Color', headerName: "Color", flex: 1}
+    { field: 'make', headerName: "Make", flex: 1},
+    { field: 'model', headerName: "Model", flex: 1},
+    { field: 'year', headerName: "Year", flex: 1},
+    { field: 'color', headerName: "Color", flex: 1}
 ]
 
 
@@ -59,7 +58,7 @@ function DataTable() {
         <div className={ open ? "hidden" : "container mx-10 my-5 flex flex-col"}
             style={{ height: 400, width: '100%'}}
         >
-            <h2 className="p-3 bg-slate-300 my-2 rounded">My Contacts</h2>
+            <h2 className="p-3 bg-slate-300 my-2 rounded">My Cars</h2>
             <DataGrid 
             rows={contactData} 
             columns={columns}

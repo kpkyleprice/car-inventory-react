@@ -12,7 +12,7 @@ interface CarFormProps {
   onClose: () => void;
 }
 
-const ContactForm = ( props:CarFormProps) => {
+const CarForm = ( props:CarFormProps) => {
   const { register, handleSubmit } = useForm({})
   const dispatch = useDispatch();
   const store = useStore();
@@ -74,4 +74,4 @@ const ContactForm = ( props:CarFormProps) => {
   )
 }
 
-export default ContactForm
+export default CarForm
