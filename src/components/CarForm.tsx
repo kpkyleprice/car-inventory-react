@@ -39,13 +39,13 @@ const CarForm = ( props:CarFormProps) => {
       props.onClose();
     }
   }
-
+  
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label htmlFor="name">Email</label>
-          <Input {...register('Email')} name='email' placeholder="Email" />
+          <Input {...register('email')} name='email' placeholder="Email" />
         </div>
         <div>
           <label htmlFor="Make">Make</label>
@@ -57,11 +57,11 @@ const CarForm = ( props:CarFormProps) => {
         </div>
         <div>
           <label htmlFor="Year">Year</label>
-          <Input {...register('Year')} name='year' placeholder="Year" />
+          <Input {...register('year')} name='year' placeholder="Year" />
         </div>
         <div>
           <label htmlFor="color">Color</label>
-          <Input {...register('color')} name='color' placeholder="color" />
+          <Input {...register('color')} name='color' placeholder="Color" />
         </div>
         <div className="flex p-1">
           <Button className="flex justify-start m-3 bg-slate-300 p-2 rounded hover:bg-slate-800 text-white">
