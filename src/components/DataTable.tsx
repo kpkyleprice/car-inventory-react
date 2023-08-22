@@ -17,7 +17,7 @@ const columns: GridColDef[] = [
 
 function DataTable() {
     let [ open, setOpen ] = useState(false);
-    const { contactData, getData } = useGetData();
+    const { carData, getData } = useGetData();
     const [ selectionModel, setSelectionModel ] = useState<string[]>([])
 
     const handleOpen = () => {
@@ -60,7 +60,7 @@ function DataTable() {
         >
             <h2 className="p-3 bg-slate-300 my-2 rounded">My Cars</h2>
             <DataGrid 
-            rows={contactData} 
+            rows={carData} 
             columns={columns}
             checkboxSelection={true} 
             onRowSelectionModelChange={ (item:any) => {
