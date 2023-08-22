@@ -4,7 +4,7 @@ import Input from "./Input"
 import { useForm } from 'react-hook-form'
 import { server_calls } from "../api/server"
 import { useDispatch, useStore } from "react-redux"
-import { chooseEmail, chooseMake, chooseModel, chooseYear, chooseColor } from "../redux/slices/RootSlice"
+import { chooseMake, chooseModel, chooseYear, chooseColor } from "../redux/slices/RootSlice"
 
 interface CarFormProps {
   id?: string[];
@@ -26,7 +26,6 @@ const CarForm = ( props:CarFormProps) => {
       setTimeout(() => {window.location.reload()}, 1000);
       event.target.reset()
     } else {
-      dispatch(chooseEmail(data.email));
       dispatch(chooseMake(data.make));
       dispatch(chooseModel(data.model));
       dispatch(chooseColor(data.color));
@@ -43,10 +42,6 @@ const CarForm = ( props:CarFormProps) => {
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
-          <label htmlFor="name">Email</label>
-          <Input {...register('email')} name='email' placeholder="Email" />
-        </div>
         <div>
           <label htmlFor="Make">Make</label>
           <Input {...register('make')} name='make' placeholder="Make" />
