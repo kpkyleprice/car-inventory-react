@@ -11,8 +11,8 @@ const rootSlice = createSlice({
     reducers: {
         chooseMake: (state, action) => { state.make = action.payload},
         chooseModel: (state, action) => { state.model = action.payload},
-        chooseYear: (state, action) => { state.year = action.payload},
-        chooseColor: (state, action) => { state.color = action.payload}
+        chooseYear: (state, action) => { state.Year = action.payload},
+        chooseColor: (state, action) => { state.Color = action.payload}
     }
 })
 
